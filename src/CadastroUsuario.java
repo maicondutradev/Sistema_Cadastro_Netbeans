@@ -102,6 +102,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         jLabel11.setText("Senha:");
 
+        txtNome.setText("altemar viado");
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
