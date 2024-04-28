@@ -103,7 +103,7 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lbReligiao" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbEscolaridade" min="-2" max="-2" attributes="0"/>
                                   <Component id="lbSenha" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -194,9 +194,9 @@
                               <Component id="lbCor" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="rbMedio" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="rbClaro" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="rbEscuro" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="rbPreta" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="rbBranca" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="rbOutras" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                           </Group>
@@ -230,24 +230,29 @@
               </Group>
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnEnviarObservacao" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollBar1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane3" pref="143" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="btnAnexarImagem" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="lbProgessoCadastro" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEnviarObservacao" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollBar1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane3" pref="143" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -279,7 +284,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbReligiao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbEscolaridade" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtReligiao" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -338,12 +343,12 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lbCor" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbClaro" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbBranca" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="rbMedio" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbPreta" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="rbEscuro" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbOutras" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Component id="spt2" min="-2" pref="16" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -379,7 +384,9 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="pbProgresso" min="-2" pref="13" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="lbProgessoCadastro" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
                   <Component id="jScrollPane1" alignment="0" pref="103" max="32767" attributes="0"/>
@@ -543,22 +550,22 @@
         <Property name="text" type="java.lang.String" value="Hobbies"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="rbClaro">
+    <Component class="javax.swing.JRadioButton" name="rbBranca">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Claro"/>
+        <Property name="text" type="java.lang.String" value="Branca"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbClaroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbBrancaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="rbMedio">
+    <Component class="javax.swing.JRadioButton" name="rbPreta">
       <Properties>
-        <Property name="text" type="java.lang.String" value="M&#xe9;dio"/>
+        <Property name="text" type="java.lang.String" value="Preta"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="rbEscuro">
+    <Component class="javax.swing.JRadioButton" name="rbOutras">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Escuro"/>
+        <Property name="text" type="java.lang.String" value="Outras"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rbHetero">
@@ -589,7 +596,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbCor">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tom de pele:"/>
+        <Property name="text" type="java.lang.String" value="Ra&#xe7;a/Cor:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnMenu">
@@ -667,12 +674,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbPessimo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pessimo"/>
+        <Property name="text" type="java.lang.String" value="P&#xe9;ssimo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbReligiao">
+    <Component class="javax.swing.JLabel" name="lbEscolaridade">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Religi&#xe3;o:"/>
+        <Property name="text" type="java.lang.String" value="Grau de escolaridade:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtReligiao">
@@ -749,6 +756,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnexarImagemActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbProgessoCadastro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Progesso de cadastro..."/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

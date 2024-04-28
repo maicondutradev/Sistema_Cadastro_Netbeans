@@ -10,9 +10,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
         btnGrupoOpcaoSexual.add(rbLgbt);
         btnGrupoOpcaoSexual.add(rbOutrasSexual);
         
-        btnGrupoCorPele.add(rbClaro);
-        btnGrupoCorPele.add(rbMedio);
-        btnGrupoCorPele.add(rbEscuro);
+        btnGrupoCorPele.add(rbBranca);
+        btnGrupoCorPele.add(rbPreta);
+        btnGrupoCorPele.add(rbOutras);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -46,9 +46,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
         cbmGenero = new javax.swing.JComboBox<>();
         cbmEstadoCivil = new javax.swing.JComboBox<>();
         lbHobbies = new javax.swing.JLabel();
-        rbClaro = new javax.swing.JRadioButton();
-        rbMedio = new javax.swing.JRadioButton();
-        rbEscuro = new javax.swing.JRadioButton();
+        rbBranca = new javax.swing.JRadioButton();
+        rbPreta = new javax.swing.JRadioButton();
+        rbOutras = new javax.swing.JRadioButton();
         rbHetero = new javax.swing.JRadioButton();
         rbLgbt = new javax.swing.JRadioButton();
         rbOutrasSexual = new javax.swing.JRadioButton();
@@ -68,7 +68,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
         lbSatisfacao = new javax.swing.JLabel();
         lbBom = new javax.swing.JLabel();
         lbPessimo = new javax.swing.JLabel();
-        lbReligiao = new javax.swing.JLabel();
+        lbEscolaridade = new javax.swing.JLabel();
         txtReligiao = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         tbntMostrarSenha = new javax.swing.JToggleButton();
@@ -82,6 +82,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
         btnAnexarImagem = new javax.swing.JButton();
+        lbProgessoCadastro = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -162,16 +163,16 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         lbHobbies.setText("Hobbies");
 
-        rbClaro.setText("Claro");
-        rbClaro.addActionListener(new java.awt.event.ActionListener() {
+        rbBranca.setText("Branca");
+        rbBranca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbClaroActionPerformed(evt);
+                rbBrancaActionPerformed(evt);
             }
         });
 
-        rbMedio.setText("Médio");
+        rbPreta.setText("Preta");
 
-        rbEscuro.setText("Escuro");
+        rbOutras.setText("Outras");
 
         rbHetero.setText("Heterossexual");
         rbHetero.addActionListener(new java.awt.event.ActionListener() {
@@ -191,7 +192,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         lbOpcaoSexual.setText("Orientação sexual:");
 
-        lbCor.setText("Tom de pele:");
+        lbCor.setText("Raça/Cor:");
 
         btnMenu.setText("MENU");
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -242,9 +243,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         lbBom.setText("Bom");
 
-        lbPessimo.setText("Pessimo");
+        lbPessimo.setText("Péssimo");
 
-        lbReligiao.setText("Religião:");
+        lbEscolaridade.setText("Grau de escolaridade:");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Cadastro de Usuário");
@@ -282,6 +283,8 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 btnAnexarImagemActionPerformed(evt);
             }
         });
+
+        lbProgessoCadastro.setText("Progesso de cadastro...");
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/arquivo (1).png"))); // NOI18N
         jMenu1.setText("File");
@@ -334,7 +337,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                                     .addComponent(cbmGenero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lbReligiao)
+                                    .addComponent(lbEscolaridade)
                                     .addComponent(lbSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -403,9 +406,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
                                 .addComponent(lbCor)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rbMedio, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(rbClaro, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(rbEscuro, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(rbPreta, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbBranca, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbOutras, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(77, 77, 77))))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -428,22 +431,25 @@ public class CadastroUsuario extends javax.swing.JFrame {
                         .addGap(94, 94, 94)
                         .addComponent(pbProgresso, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(55, 55, 55))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel19)
-                    .addComponent(btnEnviarObservacao))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAnexarImagem)
                 .addGap(21, 21, 21))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(125, 125, 125)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbProgessoCadastro)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel19)
+                            .addComponent(btnEnviarObservacao))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,7 +475,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                                 .addComponent(lbSenha)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbReligiao)
+                            .addComponent(lbEscolaridade)
                             .addComponent(txtReligiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -517,11 +523,11 @@ public class CadastroUsuario extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbCor)
-                            .addComponent(rbClaro))
+                            .addComponent(rbBranca))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbMedio)
+                        .addComponent(rbPreta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbEscuro)
+                        .addComponent(rbOutras)
                         .addGap(13, 13, 13)
                         .addComponent(spt2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -551,7 +557,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
                     .addComponent(btnEditar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pbProgresso, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(4, 4, 4)
+                .addComponent(lbProgessoCadastro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
@@ -610,9 +618,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rbLgbtActionPerformed
 
-    private void rbClaroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbClaroActionPerformed
+    private void rbBrancaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbBrancaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rbClaroActionPerformed
+    }//GEN-LAST:event_rbBrancaActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         // TODO add your handling code here:
@@ -713,6 +721,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel lbCpf;
     private javax.swing.JLabel lbEmail;
     private javax.swing.JLabel lbEndereco;
+    private javax.swing.JLabel lbEscolaridade;
     private javax.swing.JLabel lbEstadoCivil;
     private javax.swing.JLabel lbGenero;
     private javax.swing.JLabel lbHobbies;
@@ -720,19 +729,19 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel lbNome;
     private javax.swing.JLabel lbOpcaoSexual;
     private javax.swing.JLabel lbPessimo;
-    private javax.swing.JLabel lbReligiao;
+    private javax.swing.JLabel lbProgessoCadastro;
     private javax.swing.JLabel lbRg;
     private javax.swing.JLabel lbSatisfacao;
     private javax.swing.JLabel lbSenha;
     private javax.swing.JLabel lbSobrenome;
     private javax.swing.JPasswordField passSenha;
     private javax.swing.JProgressBar pbProgresso;
-    private javax.swing.JRadioButton rbClaro;
-    private javax.swing.JRadioButton rbEscuro;
+    private javax.swing.JRadioButton rbBranca;
     private javax.swing.JRadioButton rbHetero;
     private javax.swing.JRadioButton rbLgbt;
-    private javax.swing.JRadioButton rbMedio;
+    private javax.swing.JRadioButton rbOutras;
     private javax.swing.JRadioButton rbOutrasSexual;
+    private javax.swing.JRadioButton rbPreta;
     private javax.swing.JSlider slSatisfacao;
     private javax.swing.JSeparator spt1;
     private javax.swing.JSeparator spt2;
