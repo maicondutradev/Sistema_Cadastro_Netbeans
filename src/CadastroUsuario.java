@@ -596,6 +596,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Você saiu da interface!");
+        System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void txtSobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSobrenomeActionPerformed
