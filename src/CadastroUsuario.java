@@ -90,7 +90,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Usuário");
         setBackground(new java.awt.Color(204, 255, 204));
-        setPreferredSize(new java.awt.Dimension(680, 780));
         setResizable(false);
 
         lbNascimento.setText("Data de Nascimento:");
@@ -415,9 +414,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnMenu)
                         .addGap(18, 18, 18)
                         .addComponent(btnSair)
@@ -428,7 +427,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnEditar))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
+                        .addGap(235, 235, 235)
                         .addComponent(pbProgresso, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(55, 55, 55))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -638,6 +637,21 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
     private void btnApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApagarActionPerformed
         // TODO add your handling code here:
+         txtCep.setText("");
+                txtCpf.setText("");
+                txtEmail.setText("");
+                txtEndereco.setText("");
+                txtNascimento.setText("");
+                txtNome.setText("");
+                txtReligiao.setText("");
+                txtRg.setText("");
+                jTextArea1.setText("");
+                txtSobrenome.setText("");
+                cbmEstadoCivil.setSelectedIndex(0);
+                cbmGenero.setSelectedIndex(0);
+                jSpinner1.setValue(0);
+                btnGrupoOpcaoSexual.clearSelection();
+                btnGrupoCorPele.clearSelection();
         JOptionPane.showMessageDialog(null, "Dados apagados com sucesso!");
     }//GEN-LAST:event_btnApagarActionPerformed
 
@@ -648,6 +662,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
     private void btnAnexarImagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnexarImagemActionPerformed
         // TODO add your handling code here:
+        
         JOptionPane.showMessageDialog(null, "Imagem anexada com sucesso!");
     }//GEN-LAST:event_btnAnexarImagemActionPerformed
 
