@@ -1,12 +1,25 @@
+
+import javax.swing.JOptionPane;
+
 public class CadastroUsuario extends javax.swing.JFrame {
     public CadastroUsuario() {
         initComponents();
         setLocationRelativeTo(null);
+        
+        btnGrupoOpcaoSexual.add(rbHetero);
+        btnGrupoOpcaoSexual.add(rbLgbt);
+        btnGrupoOpcaoSexual.add(rbOutrasSexual);
+        
+        btnGrupoCorPele.add(rbClaro);
+        btnGrupoCorPele.add(rbMedio);
+        btnGrupoCorPele.add(rbEscuro);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnGrupoOpcaoSexual = new javax.swing.ButtonGroup();
+        btnGrupoCorPele = new javax.swing.ButtonGroup();
         lbNascimento = new javax.swing.JLabel();
         lbGenero = new javax.swing.JLabel();
         lbEmail = new javax.swing.JLabel();
@@ -42,8 +55,8 @@ public class CadastroUsuario extends javax.swing.JFrame {
         lbOpcaoSexual = new javax.swing.JLabel();
         lbCor = new javax.swing.JLabel();
         btnMenu = new javax.swing.JButton();
-        btnVoltar = new javax.swing.JButton();
-        btnLimpar = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
+        btnApagar = new javax.swing.JButton();
         btnCadastrar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         txtNascimento = new javax.swing.JTextField();
@@ -65,10 +78,10 @@ public class CadastroUsuario extends javax.swing.JFrame {
         jScrollBar1 = new javax.swing.JScrollBar();
         spt2 = new javax.swing.JSeparator();
         spt1 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
+        btnEnviarObservacao = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
-        jButton2 = new javax.swing.JButton();
+        btnAnexarImagem = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -187,14 +200,19 @@ public class CadastroUsuario extends javax.swing.JFrame {
             }
         });
 
-        btnVoltar.setText("VOLTAR");
-        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+        btnSair.setText("SAIR");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltarActionPerformed(evt);
+                btnSairActionPerformed(evt);
             }
         });
 
-        btnLimpar.setText("LIMPAR");
+        btnApagar.setText("APAGAR");
+        btnApagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApagarActionPerformed(evt);
+            }
+        });
 
         btnCadastrar.setText("CADASTRAR");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -204,6 +222,11 @@ public class CadastroUsuario extends javax.swing.JFrame {
         });
 
         btnEditar.setText("EDITAR");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
 
         passSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,10 +257,10 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         jScrollBar1.setBackground(new java.awt.Color(204, 204, 204));
 
-        jButton1.setText("Enviar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEnviarObservacao.setText("Enviar");
+        btnEnviarObservacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEnviarObservacaoActionPerformed(evt);
             }
         });
 
@@ -253,7 +276,12 @@ public class CadastroUsuario extends javax.swing.JFrame {
         jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane3.setViewportView(jTree1);
 
-        jButton2.setText("Anexar imagem");
+        btnAnexarImagem.setText("Anexar imagem");
+        btnAnexarImagem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnexarImagemActionPerformed(evt);
+            }
+        });
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/arquivo (1).png"))); // NOI18N
         jMenu1.setText("File");
@@ -389,11 +417,11 @@ public class CadastroUsuario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnMenu)
                         .addGap(18, 18, 18)
-                        .addComponent(btnVoltar)
+                        .addComponent(btnSair)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnCadastrar)
                         .addGap(12, 12, 12)
-                        .addComponent(btnLimpar)
+                        .addComponent(btnApagar)
                         .addGap(18, 18, 18)
                         .addComponent(btnEditar))
                     .addGroup(layout.createSequentialGroup()
@@ -404,7 +432,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 .addGap(125, 125, 125)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel19)
-                    .addComponent(jButton1))
+                    .addComponent(btnEnviarObservacao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -414,7 +442,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btnAnexarImagem)
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
@@ -517,9 +545,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMenu)
-                    .addComponent(btnVoltar)
+                    .addComponent(btnSair)
                     .addComponent(btnCadastrar)
-                    .addComponent(btnLimpar)
+                    .addComponent(btnApagar)
                     .addComponent(btnEditar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pbProgresso, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -531,9 +559,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel19)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addComponent(btnEnviarObservacao)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(btnAnexarImagem)
                 .addContainerGap(210, Short.MAX_VALUE))
         );
 
@@ -554,11 +582,13 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Você foi para o menu!");
     }//GEN-LAST:event_btnMenuActionPerformed
 
-    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnVoltarActionPerformed
+        JOptionPane.showMessageDialog(null, "Você saiu da interface!");
+    }//GEN-LAST:event_btnSairActionPerformed
 
     private void txtSobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSobrenomeActionPerformed
         // TODO add your handling code here:
@@ -586,15 +616,32 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Você foi cadastrado com sucesso!");
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void cbMusicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMusicaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbMusicaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnEnviarObservacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarObservacaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        JOptionPane.showMessageDialog(null, "Observação enviada com sucesso!");
+    }//GEN-LAST:event_btnEnviarObservacaoActionPerformed
+
+    private void btnApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApagarActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Dados apagados com sucesso!");
+    }//GEN-LAST:event_btnApagarActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Edite com atenção!");
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnAnexarImagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnexarImagemActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Imagem anexada com sucesso!");
+    }//GEN-LAST:event_btnAnexarImagemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -632,11 +679,15 @@ public class CadastroUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAnexarImagem;
+    private javax.swing.JButton btnApagar;
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnEnviarObservacao;
+    private javax.swing.ButtonGroup btnGrupoCorPele;
+    private javax.swing.ButtonGroup btnGrupoOpcaoSexual;
     private javax.swing.JButton btnMenu;
-    private javax.swing.JButton btnVoltar;
+    private javax.swing.JButton btnSair;
     private javax.swing.JCheckBox cbCinema;
     private javax.swing.JCheckBox cbFutebol;
     private javax.swing.JCheckBox cbLeitura;
@@ -644,8 +695,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbMusica;
     private javax.swing.JComboBox<String> cbmEstadoCivil;
     private javax.swing.JComboBox<String> cbmGenero;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel19;
