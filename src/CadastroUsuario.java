@@ -90,6 +90,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Usuário");
         setBackground(new java.awt.Color(204, 255, 204));
+        setPreferredSize(new java.awt.Dimension(670, 850));
         setResizable(false);
 
         lbNascimento.setText("Data de Nascimento:");
@@ -437,15 +438,15 @@ public class CadastroUsuario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(125, 125, 125)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbProgessoCadastro)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel19)
                             .addComponent(btnEnviarObservacao))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbProgessoCadastro))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                 .addContainerGap())
@@ -647,6 +648,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 txtRg.setText("");
                 jTextArea1.setText("");
                 txtSobrenome.setText("");
+                passSenha.setText("");
                 cbmEstadoCivil.setSelectedIndex(0);
                 cbmGenero.setSelectedIndex(0);
                 jSpinner1.setValue(0);
