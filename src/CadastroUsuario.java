@@ -33,9 +33,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
         cbmGenero = new javax.swing.JComboBox<>();
         cbmEstadoCivil = new javax.swing.JComboBox<>();
         lbHobbies = new javax.swing.JLabel();
-        rbBranco = new javax.swing.JRadioButton();
-        rbPreto = new javax.swing.JRadioButton();
-        rbOutrasCor = new javax.swing.JRadioButton();
+        rbClaro = new javax.swing.JRadioButton();
+        rbMedio = new javax.swing.JRadioButton();
+        rbEscuro = new javax.swing.JRadioButton();
         rbHetero = new javax.swing.JRadioButton();
         rbLgbt = new javax.swing.JRadioButton();
         rbOutrasSexual = new javax.swing.JRadioButton();
@@ -76,7 +76,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Usuário");
         setBackground(new java.awt.Color(204, 255, 204));
-        setPreferredSize(new java.awt.Dimension(650, 850));
+        setPreferredSize(new java.awt.Dimension(680, 780));
         setResizable(false);
 
         lbNascimento.setText("Data de Nascimento:");
@@ -145,20 +145,20 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         cbmGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "Outros" }));
 
-        cbmEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro", "Casado", "Divorciado", "Corno" }));
+        cbmEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro", "Casado", "Divorciado" }));
 
         lbHobbies.setText("Hobbies");
 
-        rbBranco.setText("Branco");
-        rbBranco.addActionListener(new java.awt.event.ActionListener() {
+        rbClaro.setText("Claro");
+        rbClaro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbBrancoActionPerformed(evt);
+                rbClaroActionPerformed(evt);
             }
         });
 
-        rbPreto.setText("Preto");
+        rbMedio.setText("Médio");
 
-        rbOutrasCor.setText("Outras");
+        rbEscuro.setText("Escuro");
 
         rbHetero.setText("Heterossexual");
         rbHetero.addActionListener(new java.awt.event.ActionListener() {
@@ -176,9 +176,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         rbOutrasSexual.setText("Outras");
 
-        lbOpcaoSexual.setText("Opção sexual:");
+        lbOpcaoSexual.setText("Orientação sexual:");
 
-        lbCor.setText("Cor:");
+        lbCor.setText("Tom de pele:");
 
         btnMenu.setText("MENU");
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -327,6 +327,13 @@ public class CadastroUsuario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(tbntMostrarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(65, 65, 65)
+                        .addComponent(lbOpcaoSexual)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbLgbt, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rbHetero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rbOutrasSexual, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -339,18 +346,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(lbPessimo, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(lbOpcaoSexual)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(rbLgbt, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(rbHetero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(rbOutrasSexual, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(slSatisfacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(lbBom, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(slSatisfacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lbBom, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap())
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(spt2, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -377,9 +375,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
                                 .addComponent(lbCor)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rbPreto, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(rbBranco, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(rbOutrasCor, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(rbMedio, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbClaro, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbEscuro, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(77, 77, 77))))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -436,10 +434,11 @@ public class CadastroUsuario extends javax.swing.JFrame {
                             .addComponent(lbSobrenome)
                             .addComponent(txtSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(passSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbSenha)
-                            .addComponent(tbntMostrarSenha))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tbntMostrarSenha, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(passSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbSenha)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbReligiao)
@@ -490,11 +489,11 @@ public class CadastroUsuario extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbCor)
-                            .addComponent(rbBranco))
+                            .addComponent(rbClaro))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbPreto)
+                        .addComponent(rbMedio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbOutrasCor)
+                        .addComponent(rbEscuro)
                         .addGap(13, 13, 13)
                         .addComponent(spt2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -581,9 +580,9 @@ public class CadastroUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rbLgbtActionPerformed
 
-    private void rbBrancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbBrancoActionPerformed
+    private void rbClaroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbClaroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rbBrancoActionPerformed
+    }//GEN-LAST:event_rbClaroActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         // TODO add your handling code here:
@@ -679,12 +678,12 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel lbSobrenome;
     private javax.swing.JPasswordField passSenha;
     private javax.swing.JProgressBar pbProgresso;
-    private javax.swing.JRadioButton rbBranco;
+    private javax.swing.JRadioButton rbClaro;
+    private javax.swing.JRadioButton rbEscuro;
     private javax.swing.JRadioButton rbHetero;
     private javax.swing.JRadioButton rbLgbt;
-    private javax.swing.JRadioButton rbOutrasCor;
+    private javax.swing.JRadioButton rbMedio;
     private javax.swing.JRadioButton rbOutrasSexual;
-    private javax.swing.JRadioButton rbPreto;
     private javax.swing.JSlider slSatisfacao;
     private javax.swing.JSeparator spt1;
     private javax.swing.JSeparator spt2;
