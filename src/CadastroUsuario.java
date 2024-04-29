@@ -1,4 +1,3 @@
-import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.JOptionPane;
 
 public class CadastroUsuario extends javax.swing.JFrame {
@@ -680,7 +679,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        FlatLightLaf.setup();
         //</editor-fold>
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
