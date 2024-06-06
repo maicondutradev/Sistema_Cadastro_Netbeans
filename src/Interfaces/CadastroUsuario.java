@@ -1,3 +1,5 @@
+package Interfaces;
+
 import javax.swing.JOptionPane;
 
 public class CadastroUsuario extends javax.swing.JFrame {
@@ -92,7 +94,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusTraversalPolicyProvider(true);
         setForeground(java.awt.Color.lightGray);
-        setPreferredSize(new java.awt.Dimension(683, 890));
         setResizable(false);
 
         lbNascimento.setText("Data de Nascimento:");
