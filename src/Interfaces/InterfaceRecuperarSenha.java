@@ -34,6 +34,7 @@ public class InterfaceRecuperarSenha extends javax.swing.JFrame {
         txtUsuario = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -67,6 +68,13 @@ public class InterfaceRecuperarSenha extends javax.swing.JFrame {
         });
 
         jLabel3.setText("Siga o passo a passo que chegar no seu e-mail.");
+
+        jButton2.setText("VOLTAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         mbMenuSuperior.setPreferredSize(new java.awt.Dimension(207, 40));
 
@@ -160,13 +168,18 @@ public class InterfaceRecuperarSenha extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(381, 381, 381)
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton2)))
                 .addContainerGap(346, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(144, 144, 144)
+                .addGap(32, 32, 32)
+                .addComponent(jButton2)
+                .addGap(89, 89, 89)
                 .addComponent(lbTitulo)
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -221,6 +234,13 @@ public class InterfaceRecuperarSenha extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miCriarContaActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        InterfaceLogin telaLogin = new InterfaceLogin();
+        telaLogin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -261,6 +281,7 @@ public class InterfaceRecuperarSenha extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;

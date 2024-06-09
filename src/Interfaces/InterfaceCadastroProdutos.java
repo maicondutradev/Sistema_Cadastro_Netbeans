@@ -53,6 +53,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         txtFornecedor = new javax.swing.JTextField();
         txtDescricao = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -109,6 +110,13 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         jLabel9.setText("Peso:");
 
         jLabel10.setText("Fornecedor:");
+
+        jButton2.setText("VOLTAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         mbMenuSuperior.setPreferredSize(new java.awt.Dimension(207, 40));
 
@@ -233,11 +241,17 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(345, 345, 345))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(126, 126, 126)
+                .addGap(29, 29, 29)
+                .addComponent(jButton2)
+                .addGap(74, 74, 74)
                 .addComponent(lbTitulo)
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -377,6 +391,13 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        InterfaceConectada telaConectada = new InterfaceConectada();
+        telaConectada.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -423,6 +444,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btngGenero;
     private javax.swing.ButtonGroup btngRacaCor;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
