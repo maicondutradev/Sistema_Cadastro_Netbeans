@@ -73,9 +73,16 @@ public class InterfaceConectada extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-data-transfer-32.png"))); // NOI18N
         jButton3.setText("HISTÓRIO DE CADASTRO");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-group-of-companies-32.png"))); // NOI18N
         jButton4.setText("FORNECEDORES");
 
         mbMenuSuperior.setPreferredSize(new java.awt.Dimension(207, 40));
@@ -192,7 +199,7 @@ public class InterfaceConectada extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jButton2)))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(143, Short.MAX_VALUE))
         );
 
         pack();
@@ -246,6 +253,13 @@ public class InterfaceConectada extends javax.swing.JFrame {
         telaListaProdutos.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        InterfaceHistoricoProdutos telaHistoricoProdutos = new InterfaceHistoricoProdutos();
+        telaHistoricoProdutos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
