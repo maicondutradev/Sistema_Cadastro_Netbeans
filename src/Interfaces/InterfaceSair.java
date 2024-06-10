@@ -28,8 +28,8 @@ public class InterfaceSair extends javax.swing.JFrame {
     private void initComponents() {
 
         lbTitulo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnSairSistema = new javax.swing.JButton();
+        btnVoltarMenu = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -52,19 +52,19 @@ public class InterfaceSair extends javax.swing.JFrame {
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("VOCÊ DESEJA SAIR DO SISTEMA?");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("SAIR DO SISTEMA");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSairSistema.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSairSistema.setText("SAIR DO SISTEMA");
+        btnSairSistema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSairSistemaActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton2.setText("VOLTAR PARA O MENU");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnVoltarMenu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnVoltarMenu.setText("VOLTAR PARA O MENU");
+        btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnVoltarMenuActionPerformed(evt);
             }
         });
 
@@ -149,9 +149,9 @@ public class InterfaceSair extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(240, 240, 240)
-                        .addComponent(jButton1)
+                        .addComponent(btnSairSistema)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2))
+                        .addComponent(btnVoltarMenu))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(280, 280, 280)
                         .addComponent(lbTitulo)))
@@ -164,8 +164,8 @@ public class InterfaceSair extends javax.swing.JFrame {
                 .addComponent(lbTitulo)
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnSairSistema)
+                    .addComponent(btnVoltarMenu))
                 .addContainerGap(187, Short.MAX_VALUE))
         );
 
@@ -186,17 +186,17 @@ public class InterfaceSair extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miLoginActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
         // TODO add your handling code here:
         InterfaceMenu telaMenu = new InterfaceMenu();
         telaMenu.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnVoltarMenuActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnSairSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairSistemaActionPerformed
         // TODO add your handling code here:
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSairSistemaActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -256,8 +256,8 @@ public class InterfaceSair extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnSairSistema;
+    private javax.swing.JButton btnVoltarMenu;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;

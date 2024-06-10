@@ -28,10 +28,10 @@ public class InterfaceConectada extends javax.swing.JFrame {
     private void initComponents() {
 
         lbTitulo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnListaProdutos = new javax.swing.JButton();
+        btnCadastrarProdutos = new javax.swing.JButton();
+        btnHistoricoCadastro = new javax.swing.JButton();
+        btnFornecedores = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -54,39 +54,39 @@ public class InterfaceConectada extends javax.swing.JFrame {
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("CONTROLE DE ESTOQUE");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-box-32.png"))); // NOI18N
-        jButton1.setText("LISTA DE PRODUTOS");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnListaProdutos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnListaProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-box-32.png"))); // NOI18N
+        btnListaProdutos.setText("LISTA DE PRODUTOS");
+        btnListaProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnListaProdutosActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/estoque32.png"))); // NOI18N
-        jButton2.setText("CADASTRAR PRODUTOS");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnCadastrarProdutos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnCadastrarProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/estoque32.png"))); // NOI18N
+        btnCadastrarProdutos.setText("CADASTRAR PRODUTOS");
+        btnCadastrarProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnCadastrarProdutosActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-data-transfer-32.png"))); // NOI18N
-        jButton3.setText("HISTÓRIO DE CADASTRO");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnHistoricoCadastro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnHistoricoCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-data-transfer-32.png"))); // NOI18N
+        btnHistoricoCadastro.setText("HISTÓRIO DE CADASTRO");
+        btnHistoricoCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnHistoricoCadastroActionPerformed(evt);
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-group-of-companies-32.png"))); // NOI18N
-        jButton4.setText("FORNECEDORES");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnFornecedores.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnFornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-group-of-companies-32.png"))); // NOI18N
+        btnFornecedores.setText("FORNECEDORES");
+        btnFornecedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnFornecedoresActionPerformed(evt);
             }
         });
 
@@ -169,15 +169,15 @@ public class InterfaceConectada extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(103, 103, 103)
-                .addComponent(jButton3)
+                .addComponent(btnHistoricoCadastro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btnCadastrarProdutos)
                 .addGap(100, 100, 100))
             .addGroup(layout.createSequentialGroup()
                 .addGap(124, 124, 124)
-                .addComponent(jButton1)
+                .addComponent(btnListaProdutos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(btnFornecedores)
                 .addGap(145, 145, 145))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -191,12 +191,12 @@ public class InterfaceConectada extends javax.swing.JFrame {
                 .addComponent(lbTitulo)
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton4))
+                    .addComponent(btnListaProdutos)
+                    .addComponent(btnFornecedores))
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
+                    .addComponent(btnHistoricoCadastro)
+                    .addComponent(btnCadastrarProdutos))
                 .addContainerGap(143, Short.MAX_VALUE))
         );
 
@@ -238,33 +238,33 @@ public class InterfaceConectada extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miCriarContaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnCadastrarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarProdutosActionPerformed
         // TODO add your handling code here:
         InterfaceCadastroProdutos telaCadastroProduto = new InterfaceCadastroProdutos();
         telaCadastroProduto.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnCadastrarProdutosActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnListaProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListaProdutosActionPerformed
         // TODO add your handling code here:
         InterfaceListaProdutos telaListaProdutos = new InterfaceListaProdutos();
         telaListaProdutos.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnListaProdutosActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnHistoricoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoricoCadastroActionPerformed
         // TODO add your handling code here:
         InterfaceHistoricoProdutos telaHistoricoProdutos = new InterfaceHistoricoProdutos();
         telaHistoricoProdutos.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnHistoricoCadastroActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFornecedoresActionPerformed
         // TODO add your handling code here:
         InterfaceFornecedores telaFornecedores = new InterfaceFornecedores();
         telaFornecedores.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnFornecedoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,10 +305,10 @@ public class InterfaceConectada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnCadastrarProdutos;
+    private javax.swing.JButton btnFornecedores;
+    private javax.swing.JButton btnHistoricoCadastro;
+    private javax.swing.JButton btnListaProdutos;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;

@@ -38,7 +38,7 @@ public class InterfaceMenu extends javax.swing.JFrame {
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        miSuporte = new javax.swing.JMenuItem();
         mnLoginCriarConta = new javax.swing.JMenu();
         miLogin = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -48,7 +48,7 @@ public class InterfaceMenu extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         miCadastrarProdutos = new javax.swing.JMenuItem();
         mnSair = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        miSairSistema = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MENU PRINCIPAL");
@@ -100,13 +100,13 @@ public class InterfaceMenu extends javax.swing.JFrame {
         mnMenu.add(miTelaPrincipal);
         mnMenu.add(jSeparator3);
 
-        jMenuItem1.setText("SUPORTE");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        miSuporte.setText("SUPORTE");
+        miSuporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                miSuporteActionPerformed(evt);
             }
         });
-        mnMenu.add(jMenuItem1);
+        mnMenu.add(miSuporte);
 
         mbMenuSuperior.add(mnMenu);
 
@@ -147,13 +147,13 @@ public class InterfaceMenu extends javax.swing.JFrame {
         mnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/sair (2).png"))); // NOI18N
         mnSair.setText("SAIR");
 
-        jMenuItem6.setText("SAIR DO SISTEMA");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        miSairSistema.setText("SAIR DO SISTEMA");
+        miSairSistema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                miSairSistemaActionPerformed(evt);
             }
         });
-        mnSair.add(jMenuItem6);
+        mnSair.add(miSairSistema);
 
         mbMenuSuperior.add(mnSair);
 
@@ -238,12 +238,12 @@ public class InterfaceMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnSairActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void miSairSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miSairSistemaActionPerformed
         // TODO add your handling code here:
         InterfaceSair telaSair = new InterfaceSair();
         telaSair.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_miSairSistemaActionPerformed
 
     private void btnSuporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuporteActionPerformed
         // TODO add your handling code here:
@@ -252,12 +252,12 @@ public class InterfaceMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnSuporteActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void miSuporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miSuporteActionPerformed
         // TODO add your handling code here:
         InterfaceSuporte telaSuporte = new InterfaceSuporte();
         telaSuporte.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_miSuporteActionPerformed
 
     private void miCriarContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCriarContaActionPerformed
         // TODO add your handling code here:
@@ -305,8 +305,6 @@ public class InterfaceMenu extends javax.swing.JFrame {
     private javax.swing.JButton btnLoginCriarConta;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnSuporte;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
@@ -319,6 +317,8 @@ public class InterfaceMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem miCriarConta;
     private javax.swing.JMenuItem miListaProdutos;
     private javax.swing.JMenuItem miLogin;
+    private javax.swing.JMenuItem miSairSistema;
+    private javax.swing.JMenuItem miSuporte;
     private javax.swing.JMenuItem miTelaPrincipal;
     private javax.swing.JMenu mnEstoque;
     private javax.swing.JMenu mnLoginCriarConta;

@@ -33,12 +33,12 @@ public class InterfaceLogin extends javax.swing.JFrame {
         lbLoginCriarConta = new javax.swing.JLabel();
         lbSuporte = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        btnEntrar = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
+        lbNaoPossuiConta = new javax.swing.JLabel();
+        btnCriarConta = new javax.swing.JButton();
+        lbEsqueceuSenha = new javax.swing.JLabel();
+        btnRecuperar = new javax.swing.JButton();
         pwSenha = new javax.swing.JPasswordField();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
@@ -68,35 +68,35 @@ public class InterfaceLogin extends javax.swing.JFrame {
         lbSuporte.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbSuporte.setText("Senha:");
 
-        jButton1.setText("ENTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEntrar.setText("ENTRAR");
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEntrarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("SAIR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnSair.setText("SAIR");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnSairActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Não possuir conta?");
+        lbNaoPossuiConta.setText("Não possuir conta?");
 
-        jButton3.setText("Criar conta");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnCriarConta.setText("Criar conta");
+        btnCriarConta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnCriarContaActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Esqueceu a senha?");
+        lbEsqueceuSenha.setText("Esqueceu a senha?");
 
-        jButton4.setText("Recuperar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnRecuperar.setText("Recuperar");
+        btnRecuperar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnRecuperarActionPerformed(evt);
             }
         });
 
@@ -180,14 +180,11 @@ public class InterfaceLogin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(366, 366, 366)
-                        .addComponent(lbTitulo))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(309, 309, 309)
-                        .addComponent(jButton1))
+                        .addComponent(btnEntrar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(452, 452, 452)
-                        .addComponent(jButton2))
+                        .addComponent(btnSair))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(285, 285, 285)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -202,22 +199,25 @@ public class InterfaceLogin extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jButton3))
-                            .addComponent(jLabel1))
+                                .addComponent(btnCriarConta))
+                            .addComponent(lbNaoPossuiConta))
                         .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jButton4))
-                            .addComponent(jLabel2))))
+                                .addComponent(btnRecuperar))
+                            .addComponent(lbEsqueceuSenha)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(lbTitulo)))
                 .addContainerGap(345, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(145, 145, 145)
+                .addGap(148, 148, 148)
                 .addComponent(lbTitulo)
-                .addGap(38, 38, 38)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbLoginCriarConta)
                     .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -227,18 +227,18 @@ public class InterfaceLogin extends javax.swing.JFrame {
                     .addComponent(pwSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnEntrar)
+                    .addComponent(btnSair))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(lbNaoPossuiConta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3))
+                        .addComponent(btnCriarConta))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addComponent(lbEsqueceuSenha)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4)))
+                        .addComponent(btnRecuperar)))
                 .addContainerGap(99, Short.MAX_VALUE))
         );
 
@@ -259,7 +259,7 @@ public class InterfaceLogin extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miLoginActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
         if (txtUsuario.getText().trim().isEmpty()) {
         JOptionPane.showMessageDialog(null, "O campo Usuário é obrigatório!", "Validação", JOptionPane.ERROR_MESSAGE);
@@ -285,7 +285,7 @@ public class InterfaceLogin extends javax.swing.JFrame {
             txtUsuario.requestFocus();
         }
     }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -301,19 +301,19 @@ public class InterfaceLogin extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecuperarActionPerformed
         // TODO add your handling code here:
         InterfaceRecuperarSenha telaRecuperarSenha = new InterfaceRecuperarSenha();
         telaRecuperarSenha.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnRecuperarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnCriarContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarContaActionPerformed
         // TODO add your handling code here:
         InterfaceCadastroUsuario telaCadastroUsuario = new InterfaceCadastroUsuario();
         telaCadastroUsuario.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnCriarContaActionPerformed
 
     private void miCriarContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCriarContaActionPerformed
         // TODO add your handling code here:
@@ -322,12 +322,12 @@ public class InterfaceLogin extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miCriarContaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         // TODO add your handling code here:
         InterfaceSair telaSair = new InterfaceSair();
         telaSair.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -366,18 +366,18 @@ public class InterfaceLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnCriarConta;
+    private javax.swing.JButton btnEntrar;
+    private javax.swing.JButton btnRecuperar;
+    private javax.swing.JButton btnSair;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JLabel lbEsqueceuSenha;
     private javax.swing.JLabel lbLoginCriarConta;
+    private javax.swing.JLabel lbNaoPossuiConta;
     private javax.swing.JLabel lbSuporte;
     private javax.swing.JLabel lbTitulo;
     private javax.swing.JMenuBar mbMenuSuperior;

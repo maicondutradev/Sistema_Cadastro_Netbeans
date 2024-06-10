@@ -30,10 +30,10 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
     private void initComponents() {
 
         lbTitulo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        btnSim = new javax.swing.JButton();
+        btnNao = new javax.swing.JButton();
+        pnPainel = new javax.swing.JPanel();
+        lbNomeProduto = new javax.swing.JLabel();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -56,41 +56,41 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("VOCÊ DESEJA EXCLUIR O PRODUTO?");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("SIM");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSim.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSim.setText("SIM");
+        btnSim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSimActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton2.setText("NÃO");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnNao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnNao.setText("NÃO");
+        btnNao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnNaoActionPerformed(evt);
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pnPainel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Notebook Dell Inspiron 15");
+        lbNomeProduto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lbNomeProduto.setText("Notebook Dell Inspiron 15");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnPainelLayout = new javax.swing.GroupLayout(pnPainel);
+        pnPainel.setLayout(pnPainelLayout);
+        pnPainelLayout.setHorizontalGroup(
+            pnPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnPainelLayout.createSequentialGroup()
                 .addGap(153, 153, 153)
-                .addComponent(jLabel1)
+                .addComponent(lbNomeProduto)
                 .addContainerGap(195, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnPainelLayout.setVerticalGroup(
+            pnPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnPainelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lbNomeProduto)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -173,9 +173,9 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(338, 338, 338)
-                .addComponent(jButton1)
+                .addComponent(btnSim)
                 .addGap(82, 82, 82)
-                .addComponent(jButton2)
+                .addComponent(btnNao)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(204, Short.MAX_VALUE)
@@ -184,7 +184,7 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
                         .addComponent(lbTitulo)
                         .addGap(291, 291, 291))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pnPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(179, 179, 179))))
         );
         layout.setVerticalGroup(
@@ -193,11 +193,11 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
                 .addGap(149, 149, 149)
                 .addComponent(lbTitulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(btnNao)
+                    .addComponent(btnSim))
                 .addContainerGap(198, Short.MAX_VALUE))
         );
 
@@ -218,21 +218,21 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miLoginActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNaoActionPerformed
         // TODO add your handling code here:
         InterfaceListaProdutos telaListaProdutos = new InterfaceListaProdutos();
         telaListaProdutos.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnNaoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Produto excluido com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         
         InterfaceListaProdutos telaListaProdutos = new InterfaceListaProdutos();
         telaListaProdutos.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSimActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -294,15 +294,14 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnNao;
+    private javax.swing.JButton btnSim;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JLabel lbNomeProduto;
     private javax.swing.JLabel lbTitulo;
     private javax.swing.JMenuBar mbMenuSuperior;
     private javax.swing.JMenuItem miCadastrarProdutos;
@@ -314,5 +313,6 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
     private javax.swing.JMenu mnLoginCriarConta;
     private javax.swing.JMenu mnMenu;
     private javax.swing.JMenu mnSair;
+    private javax.swing.JPanel pnPainel;
     // End of variables declaration//GEN-END:variables
 }

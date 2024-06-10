@@ -4,6 +4,8 @@
  */
 package Interfaces;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author maico
@@ -28,16 +30,16 @@ public class InterfaceSuporte extends javax.swing.JFrame {
     private void initComponents() {
 
         lbTitulo = new javax.swing.JLabel();
-        lbLoginCriarConta = new javax.swing.JLabel();
-        lbSuporte = new javax.swing.JLabel();
-        lbSair = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        lbNome = new javax.swing.JLabel();
+        lbEmail = new javax.swing.JLabel();
+        lbProblema = new javax.swing.JLabel();
+        lbEntreContato = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        txtaProblema = new javax.swing.JTextArea();
+        btnEnviar = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -59,28 +61,33 @@ public class InterfaceSuporte extends javax.swing.JFrame {
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("SUPORTE AO USUÁRIO");
 
-        lbLoginCriarConta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lbLoginCriarConta.setText("Nome:");
+        lbNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lbNome.setText("Nome:");
 
-        lbSuporte.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lbSuporte.setText("Email:");
+        lbEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lbEmail.setText("Email:");
 
-        lbSair.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lbSair.setText("Problema:");
+        lbProblema.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lbProblema.setText("Problema:");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Entre em contato");
+        lbEntreContato.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbEntreContato.setText("Entre em contato");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtaProblema.setColumns(20);
+        txtaProblema.setRows(5);
+        jScrollPane1.setViewportView(txtaProblema);
 
-        jButton1.setText("ENVIAR");
-
-        jButton2.setText("VOLTAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnEnviar.setText("ENVIAR");
+        btnEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnEnviarActionPerformed(evt);
+            }
+        });
+
+        btnVoltar.setText("VOLTAR");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
             }
         });
 
@@ -167,49 +174,49 @@ public class InterfaceSuporte extends javax.swing.JFrame {
                         .addComponent(lbTitulo))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(376, 376, 376)
-                        .addComponent(jLabel1))
+                        .addComponent(lbEntreContato))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(276, 276, 276)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbSair)
-                            .addComponent(lbSuporte)
-                            .addComponent(lbLoginCriarConta))
+                            .addComponent(lbProblema)
+                            .addComponent(lbEmail)
+                            .addComponent(lbNome))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1)))
+                            .addComponent(txtNome)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(411, 411, 411)
-                        .addComponent(jButton1))
+                        .addComponent(btnEnviar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jButton2)))
+                        .addComponent(btnVoltar)))
                 .addContainerGap(342, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addComponent(jButton2)
+                .addComponent(btnVoltar)
                 .addGap(88, 88, 88)
                 .addComponent(lbTitulo)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(lbEntreContato)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbLoginCriarConta)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbNome)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbSuporte)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbEmail)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbSair)
+                    .addComponent(lbProblema)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnEnviar)
                 .addContainerGap(77, Short.MAX_VALUE))
         );
 
@@ -251,12 +258,37 @@ public class InterfaceSuporte extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miCriarContaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         // TODO add your handling code here:
         InterfaceMenu telaMenu = new InterfaceMenu();
         telaMenu.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
+        // TODO add your handling code here:
+        if (txtNome.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "O campo Nome é obrigatório!", "Validação", JOptionPane.ERROR_MESSAGE);
+        txtNome.requestFocus();
+        } else if (txtEmail.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "O campo Email é obrigatório!", "Validação", JOptionPane.ERROR_MESSAGE);
+        txtEmail.requestFocus();
+        } else if(txtaProblema.getText().trim().isEmpty())
+        {
+        JOptionPane.showMessageDialog(null, "O campo Problema é obrigatório!", "Validação", JOptionPane.ERROR_MESSAGE);
+        txtaProblema.requestFocus();
+        }
+        else
+        {
+        JOptionPane.showMessageDialog(null, "Mensagem enviada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        txtNome.setText("");
+        txtEmail.setText("");
+        txtaProblema.setText("");
+        }
+        
+        
+        
+    }//GEN-LAST:event_btnEnviarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -295,20 +327,17 @@ public class InterfaceSuporte extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnEnviar;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JLabel lbLoginCriarConta;
-    private javax.swing.JLabel lbSair;
-    private javax.swing.JLabel lbSuporte;
+    private javax.swing.JLabel lbEmail;
+    private javax.swing.JLabel lbEntreContato;
+    private javax.swing.JLabel lbNome;
+    private javax.swing.JLabel lbProblema;
     private javax.swing.JLabel lbTitulo;
     private javax.swing.JMenuBar mbMenuSuperior;
     private javax.swing.JMenuItem miCadastrarProdutos;
@@ -320,5 +349,8 @@ public class InterfaceSuporte extends javax.swing.JFrame {
     private javax.swing.JMenu mnLoginCriarConta;
     private javax.swing.JMenu mnMenu;
     private javax.swing.JMenu mnSair;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextArea txtaProblema;
     // End of variables declaration//GEN-END:variables
 }
