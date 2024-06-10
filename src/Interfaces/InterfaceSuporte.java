@@ -37,6 +37,7 @@ public class InterfaceSuporte extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -75,6 +76,13 @@ public class InterfaceSuporte extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("ENVIAR");
+
+        jButton2.setText("VOLTAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         mbMenuSuperior.setPreferredSize(new java.awt.Dimension(207, 40));
 
@@ -170,16 +178,21 @@ public class InterfaceSuporte extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(411, 411, 411)
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jButton2)))
                 .addContainerGap(342, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
+                .addGap(39, 39, 39)
+                .addComponent(jButton2)
+                .addGap(88, 88, 88)
                 .addComponent(lbTitulo)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
@@ -238,6 +251,13 @@ public class InterfaceSuporte extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miCriarContaActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        InterfaceMenu telaMenu = new InterfaceMenu();
+        telaMenu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -276,6 +296,7 @@ public class InterfaceSuporte extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;

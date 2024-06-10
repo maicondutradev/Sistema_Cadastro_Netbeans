@@ -76,6 +76,11 @@ public class InterfaceLogin extends javax.swing.JFrame {
         });
 
         jButton2.setText("SAIR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Não possuir conta?");
 
@@ -316,6 +321,13 @@ public class InterfaceLogin extends javax.swing.JFrame {
         telaCadastroUsario.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_miCriarContaActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        InterfaceSair telaSair = new InterfaceSair();
+        telaSair.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
