@@ -424,7 +424,7 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Cadastro concluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Usuário cadastrado concluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
             txtEmail.setText("");
             txtNome.setText("");
             pwSenha.setText("");

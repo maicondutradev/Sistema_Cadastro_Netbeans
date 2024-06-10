@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author maico
  */
-public class InterfaceCadastroProdutos extends javax.swing.JFrame {
+public class InterfaceEditarProdutos extends javax.swing.JFrame {
 
     /**
      * Creates new form InterfaceMenu
      */
-    public InterfaceCadastroProdutos() {
+    public InterfaceEditarProdutos() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -72,10 +72,9 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MENU PRINCIPAL");
-        setPreferredSize(new java.awt.Dimension(900, 536));
 
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lbTitulo.setText("CADASTRO DE PRODUTOS NO ESTOQUE");
+        lbTitulo.setText("EDITAR PRODUTO");
 
         jLabel1.setText("Código do produto:");
 
@@ -94,7 +93,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         jLabel5.setText("Código de barra:");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("CADASTRAR PRODUTO");
+        jButton1.setText("EDITAR PRODUTO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -196,10 +195,6 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lbTitulo)
-                .addGap(262, 262, 262))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(143, 143, 143)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
@@ -237,23 +232,25 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
                     .addComponent(txtPeso)
                     .addComponent(txtFornecedor))
                 .addGap(151, 151, 151))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(345, 345, 345))
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jButton2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbTitulo, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(350, 350, 350))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jButton2)
-                .addGap(74, 74, 74)
+                .addGap(76, 76, 76)
                 .addComponent(lbTitulo)
-                .addGap(43, 43, 43)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -285,9 +282,9 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jLabel10)
                     .addComponent(txtFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
+                .addGap(41, 41, 41)
                 .addComponent(jButton1)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         pack();
@@ -323,7 +320,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
 
     private void miCriarContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCriarContaActionPerformed
         // TODO add your handling code here:
-        InterfaceCadastroProdutos telaCadastroUsario = new InterfaceCadastroProdutos();
+        InterfaceEditarProdutos telaCadastroUsario = new InterfaceEditarProdutos();
         telaCadastroUsario.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_miCriarContaActionPerformed
@@ -377,7 +374,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Produto editado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
             txtCodigoProduto.setText("");
             txtNome.setText("");
             txtDescricao.setText("");
@@ -415,14 +412,22 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfaceCadastroProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfaceEditarProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfaceCadastroProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfaceEditarProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfaceCadastroProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfaceEditarProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfaceCadastroProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfaceEditarProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -435,7 +440,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfaceCadastroProdutos().setVisible(true);
+                new InterfaceEditarProdutos().setVisible(true);
             }
         });
     }

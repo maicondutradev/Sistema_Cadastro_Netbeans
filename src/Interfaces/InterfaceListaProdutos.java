@@ -105,6 +105,11 @@ public class InterfaceListaProdutos extends javax.swing.JFrame {
         });
 
         jButton3.setText("EDITAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("EXCLUIR");
 
@@ -482,6 +487,13 @@ public class InterfaceListaProdutos extends javax.swing.JFrame {
         telaDetalhesProdutos.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        InterfaceEditarProdutos telaEditarProdutos = new InterfaceEditarProdutos();
+        telaEditarProdutos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
