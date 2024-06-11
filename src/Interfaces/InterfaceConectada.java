@@ -49,7 +49,7 @@ public class InterfaceConectada extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MENU PRINCIPAL");
+        setTitle("CONTA CONECTADA");
 
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("CONTROLE DE ESTOQUE");
@@ -140,10 +140,20 @@ public class InterfaceConectada extends javax.swing.JFrame {
         mnEstoque.setText("ESTOQUE");
 
         miListaProdutos.setText("LISTA DE PRODUTOS");
+        miListaProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miListaProdutosActionPerformed(evt);
+            }
+        });
         mnEstoque.add(miListaProdutos);
         mnEstoque.add(jSeparator2);
 
         miCadastrarProdutos.setText("CADASTRAR PRODUTOS");
+        miCadastrarProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastrarProdutosActionPerformed(evt);
+            }
+        });
         mnEstoque.add(miCadastrarProdutos);
 
         mbMenuSuperior.add(mnEstoque);
@@ -265,6 +275,20 @@ public class InterfaceConectada extends javax.swing.JFrame {
         telaFornecedores.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnFornecedoresActionPerformed
+
+    private void miListaProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miListaProdutosActionPerformed
+        // TODO add your handling code here:
+        InterfaceListaProdutos telaListaProdutos = new InterfaceListaProdutos();
+        telaListaProdutos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miListaProdutosActionPerformed
+
+    private void miCadastrarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastrarProdutosActionPerformed
+        // TODO add your handling code here:
+        InterfaceCadastroProdutos telaCadastroProduto = new InterfaceCadastroProdutos();
+        telaCadastroProduto.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miCadastrarProdutosActionPerformed
 
     /**
      * @param args the command line arguments

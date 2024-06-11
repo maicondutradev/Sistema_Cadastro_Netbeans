@@ -68,6 +68,7 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
         ckbPodeExcluirUsuario = new javax.swing.JCheckBox();
         btnCadastrarUsuario = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -77,15 +78,11 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
         miLogin = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         miCriarConta = new javax.swing.JMenuItem();
-        mnEstoque = new javax.swing.JMenu();
-        miListaProdutos = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        miCadastrarProdutos = new javax.swing.JMenuItem();
         mnSair = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MENU PRINCIPAL");
+        setTitle("CADASTRO DE USUÁRIO");
 
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("CADASTRO DE USUÁRIO");
@@ -132,6 +129,11 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
         ckbPodeCadastrarProduto.setText("Pode cadastrar produto");
 
         ckbPodeEditarProduto.setText("Pode editar produto");
+        ckbPodeEditarProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ckbPodeEditarProdutoActionPerformed(evt);
+            }
+        });
 
         ckbPodeExcluirProduto.setText("Pode excluir produto");
 
@@ -156,6 +158,14 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setText("LIMPAR DADOS");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -205,18 +215,6 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
 
         mbMenuSuperior.add(mnLoginCriarConta);
 
-        mnEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-stock-32.png"))); // NOI18N
-        mnEstoque.setText("ESTOQUE");
-
-        miListaProdutos.setText("LISTA DE PRODUTOS");
-        mnEstoque.add(miListaProdutos);
-        mnEstoque.add(jSeparator2);
-
-        miCadastrarProdutos.setText("CADASTRAR PRODUTOS");
-        mnEstoque.add(miCadastrarProdutos);
-
-        mbMenuSuperior.add(mnEstoque);
-
         mnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/sair (2).png"))); // NOI18N
         mnSair.setText("SAIR");
 
@@ -237,51 +235,49 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnCadastrarUsuario)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(39, 39, 39)
-                            .addComponent(btnVoltar)
-                            .addGap(199, 199, 199)
-                            .addComponent(lbTitulo))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(160, 160, 160)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(lbNome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtNome))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(lbSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(pwSenha))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(lbEmail)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(lbSobrenome)
-                                        .addComponent(lbGenero)
-                                        .addComponent(lbRacaCor))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(rbMasculino, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(rbFeminino, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(rbOutros, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(rbBranca, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(rbPreta, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(rbOutras, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lbCargo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lbTurno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lbPermissoes, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(btnVoltar)
+                        .addGap(199, 199, 199)
+                        .addComponent(lbTitulo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(160, 160, 160)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lbNome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtNome))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lbSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(pwSenha))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lbEmail)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lbSobrenome)
+                                    .addComponent(lbGenero)
+                                    .addComponent(lbRacaCor))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbMasculino, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbFeminino, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbOutros, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbBranca, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbPreta, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbOutras, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbCargo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbTurno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbPermissoes, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cbCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -292,6 +288,12 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
                     .addComponent(ckbPodecadastrarUsuario)
                     .addComponent(ckbPodeExcluirUsuario))
                 .addContainerGap(201, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCadastrarUsuario)
+                .addGap(59, 59, 59)
+                .addComponent(jButton1)
+                .addGap(274, 274, 274))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -357,7 +359,9 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rbOutras)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addComponent(btnCadastrarUsuario)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCadastrarUsuario)
+                    .addComponent(jButton1))
                 .addGap(59, 59, 59))
         );
 
@@ -450,6 +454,26 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbCargoActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+            JOptionPane.showMessageDialog(null, "Dados apagados com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            txtEmail.setText("");
+            txtNome.setText("");
+            pwSenha.setText("");
+            txtSobrenome.setText("");
+            btngGenero.clearSelection();
+            btngRacaCor.clearSelection();
+            ckbPodecadastrarUsuario.setSelected(false);
+            ckbPodeEditarProduto.setSelected(false);
+            ckbPodeExcluirProduto.setSelected(false);
+            ckbPodeCadastrarProduto.setSelected(false);
+            ckbPodeExcluirUsuario.setSelected(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ckbPodeEditarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ckbPodeEditarProdutoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ckbPodeEditarProdutoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -500,10 +524,10 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbPodeExcluirProduto;
     private javax.swing.JCheckBox ckbPodeExcluirUsuario;
     private javax.swing.JCheckBox ckbPodecadastrarUsuario;
+    private javax.swing.JButton jButton1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JLabel lbCargo;
     private javax.swing.JLabel lbEmail;
@@ -516,12 +540,9 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel lbTitulo;
     private javax.swing.JLabel lbTurno;
     private javax.swing.JMenuBar mbMenuSuperior;
-    private javax.swing.JMenuItem miCadastrarProdutos;
     private javax.swing.JMenuItem miCriarConta;
-    private javax.swing.JMenuItem miListaProdutos;
     private javax.swing.JMenuItem miLogin;
     private javax.swing.JMenuItem miTelaPrincipal;
-    private javax.swing.JMenu mnEstoque;
     private javax.swing.JMenu mnLoginCriarConta;
     private javax.swing.JMenu mnMenu;
     private javax.swing.JMenu mnSair;

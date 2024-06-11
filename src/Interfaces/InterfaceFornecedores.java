@@ -77,7 +77,7 @@ public class InterfaceFornecedores extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MENU PRINCIPAL");
+        setTitle("FORNECEDORES");
 
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("FORNECEDORES");

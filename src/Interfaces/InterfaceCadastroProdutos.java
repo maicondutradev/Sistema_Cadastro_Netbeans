@@ -54,6 +54,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         txtFornecedor = new javax.swing.JTextField();
         txtDescricao = new javax.swing.JTextField();
         btnVoltar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -71,7 +72,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MENU PRINCIPAL");
+        setTitle("CADASTRO DE PRODUTO");
         setPreferredSize(new java.awt.Dimension(900, 536));
 
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -115,6 +116,14 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setText("LIMPAR DADOS");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -168,10 +177,20 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         mnEstoque.setText("ESTOQUE");
 
         miListaProdutos.setText("LISTA DE PRODUTOS");
+        miListaProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miListaProdutosActionPerformed(evt);
+            }
+        });
         mnEstoque.add(miListaProdutos);
         mnEstoque.add(jSeparator2);
 
         miCadastrarProdutos.setText("CADASTRAR PRODUTOS");
+        miCadastrarProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastrarProdutosActionPerformed(evt);
+            }
+        });
         mnEstoque.add(miCadastrarProdutos);
 
         mbMenuSuperior.add(mnEstoque);
@@ -240,7 +259,9 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCadastrarProduto)
-                .addGap(345, 345, 345))
+                .addGap(83, 83, 83)
+                .addComponent(jButton1)
+                .addGap(244, 244, 244))
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(btnVoltar)
@@ -286,8 +307,10 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
                     .addComponent(lbFornecedor)
                     .addComponent(txtFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
-                .addComponent(btnCadastrarProduto)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCadastrarProduto)
+                    .addComponent(jButton1))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
@@ -398,6 +421,35 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+            JOptionPane.showMessageDialog(null, "Dados limpados com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            txtCodigoProduto.setText("");
+            txtNome.setText("");
+            txtDescricao.setText("");
+            txtCategoria.setText("");
+            txtCodigoBarra.setText("");
+            txtMarca.setText("");
+            txtPreco.setText("");
+            spQuantidade.setValue(0);
+            txtPeso.setText("");
+            txtFornecedor.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void miListaProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miListaProdutosActionPerformed
+        // TODO add your handling code here:
+        InterfaceListaProdutos telaListaProdutos = new InterfaceListaProdutos();
+        telaListaProdutos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miListaProdutosActionPerformed
+
+    private void miCadastrarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastrarProdutosActionPerformed
+        // TODO add your handling code here:
+        InterfaceCadastroProdutos telaCadastroProduto = new InterfaceCadastroProdutos();
+        telaCadastroProduto.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miCadastrarProdutosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -445,6 +497,7 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
     private javax.swing.JButton btnVoltar;
     private javax.swing.ButtonGroup btngGenero;
     private javax.swing.ButtonGroup btngRacaCor;
+    private javax.swing.JButton jButton1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;

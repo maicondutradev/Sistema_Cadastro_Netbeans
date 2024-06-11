@@ -78,7 +78,7 @@ public class InterfaceListaProdutos extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MENU PRINCIPAL");
+        setTitle("LISTA DE PRODUTOS");
         setPreferredSize(new java.awt.Dimension(901, 536));
 
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -411,7 +411,7 @@ public class InterfaceListaProdutos extends javax.swing.JFrame {
                 .addComponent(btnVoltar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(126, Short.MAX_VALUE)
+                .addContainerGap(168, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lbTitulo)
@@ -441,7 +441,7 @@ public class InterfaceListaProdutos extends javax.swing.JFrame {
                     .addComponent(lbPaginacao)
                     .addComponent(btnLeft)
                     .addComponent(btnRight))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         pack();

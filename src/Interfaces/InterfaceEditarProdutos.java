@@ -54,6 +54,7 @@ public class InterfaceEditarProdutos extends javax.swing.JFrame {
         txtFornecedor = new javax.swing.JTextField();
         txtDescricao = new javax.swing.JTextField();
         btnVoltar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         mbMenuSuperior = new javax.swing.JMenuBar();
         mnMenu = new javax.swing.JMenu();
         miTelaPrincipal = new javax.swing.JMenuItem();
@@ -71,7 +72,7 @@ public class InterfaceEditarProdutos extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MENU PRINCIPAL");
+        setTitle("EDITAR PRODUTO");
 
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("EDITAR PRODUTO");
@@ -114,6 +115,14 @@ public class InterfaceEditarProdutos extends javax.swing.JFrame {
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setText("LIMPAR DADOS");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -232,16 +241,21 @@ public class InterfaceEditarProdutos extends javax.swing.JFrame {
                     .addComponent(txtPeso)
                     .addComponent(txtFornecedor))
                 .addGap(151, 151, 151))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(btnVoltar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbTitulo, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnEditarProduto, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addComponent(lbTitulo)
                 .addGap(350, 350, 350))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(btnVoltar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(328, 328, 328)
+                        .addComponent(btnEditarProduto)
+                        .addGap(32, 32, 32)
+                        .addComponent(jButton1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,9 +296,11 @@ public class InterfaceEditarProdutos extends javax.swing.JFrame {
                     .addComponent(lbCodigoBarra)
                     .addComponent(lbFornecedor)
                     .addComponent(txtFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addComponent(btnEditarProduto)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditarProduto)
+                    .addComponent(jButton1))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         pack();
@@ -395,6 +411,21 @@ public class InterfaceEditarProdutos extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+            JOptionPane.showMessageDialog(null, "Dados limpados com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            txtCodigoProduto.setText("");
+            txtNome.setText("");
+            txtDescricao.setText("");
+            txtCategoria.setText("");
+            txtCodigoBarra.setText("");
+            txtMarca.setText("");
+            txtPreco.setText("");
+            spQuantidade.setValue(0);
+            txtPeso.setText("");
+            txtFornecedor.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -450,6 +481,7 @@ public class InterfaceEditarProdutos extends javax.swing.JFrame {
     private javax.swing.JButton btnVoltar;
     private javax.swing.ButtonGroup btngGenero;
     private javax.swing.ButtonGroup btngRacaCor;
+    private javax.swing.JButton jButton1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;

@@ -51,7 +51,7 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MENU PRINCIPAL");
+        setTitle("EXCLUIR PRODUTO");
 
         lbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbTitulo.setText("VOCÊ DESEJA EXCLUIR O PRODUTO?");
