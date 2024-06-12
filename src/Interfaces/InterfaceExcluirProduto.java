@@ -27,10 +27,6 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
         miLogin = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         miCriarConta = new javax.swing.JMenuItem();
-        mnEstoque = new javax.swing.JMenu();
-        miListaProdutos = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        miCadastrarProdutos = new javax.swing.JMenuItem();
         mnSair = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
 
@@ -123,18 +119,6 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
         mnLoginCriarConta.add(miCriarConta);
 
         mbMenuSuperior.add(mnLoginCriarConta);
-
-        mnEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-stock-32.png"))); // NOI18N
-        mnEstoque.setText("ESTOQUE");
-
-        miListaProdutos.setText("LISTA DE PRODUTOS");
-        mnEstoque.add(miListaProdutos);
-        mnEstoque.add(jSeparator2);
-
-        miCadastrarProdutos.setText("CADASTRAR PRODUTOS");
-        mnEstoque.add(miCadastrarProdutos);
-
-        mbMenuSuperior.add(mnEstoque);
 
         mnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/sair (2).png"))); // NOI18N
         mnSair.setText("SAIR");
@@ -283,17 +267,13 @@ public class InterfaceExcluirProduto extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JLabel lbNomeProduto;
     private javax.swing.JLabel lbTitulo;
     private javax.swing.JMenuBar mbMenuSuperior;
-    private javax.swing.JMenuItem miCadastrarProdutos;
     private javax.swing.JMenuItem miCriarConta;
-    private javax.swing.JMenuItem miListaProdutos;
     private javax.swing.JMenuItem miLogin;
     private javax.swing.JMenuItem miTelaPrincipal;
-    private javax.swing.JMenu mnEstoque;
     private javax.swing.JMenu mnLoginCriarConta;
     private javax.swing.JMenu mnMenu;
     private javax.swing.JMenu mnSair;

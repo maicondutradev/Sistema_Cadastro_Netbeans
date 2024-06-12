@@ -22,12 +22,15 @@ public class InterfaceConectada extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem1 = new javax.swing.JMenuItem();
         mnLoginCriarConta = new javax.swing.JMenu();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         miCriarConta = new javax.swing.JMenuItem();
         mnEstoque = new javax.swing.JMenu();
         miListaProdutos = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         miCadastrarProdutos = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        miFornecedores = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        miHistoricoCadastro = new javax.swing.JMenuItem();
         mnSair = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
 
@@ -99,7 +102,6 @@ public class InterfaceConectada extends javax.swing.JFrame {
 
         mnLoginCriarConta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-user-32.png"))); // NOI18N
         mnLoginCriarConta.setText("LOGIN");
-        mnLoginCriarConta.add(jSeparator1);
 
         miCriarConta.setText("CRIAR CONTA");
         miCriarConta.addActionListener(new java.awt.event.ActionListener() {
@@ -130,6 +132,24 @@ public class InterfaceConectada extends javax.swing.JFrame {
             }
         });
         mnEstoque.add(miCadastrarProdutos);
+        mnEstoque.add(jSeparator4);
+
+        miFornecedores.setText("FORNECEDORES");
+        miFornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miFornecedoresActionPerformed(evt);
+            }
+        });
+        mnEstoque.add(miFornecedores);
+        mnEstoque.add(jSeparator5);
+
+        miHistoricoCadastro.setText("HISTORICO CADASTRO");
+        miHistoricoCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miHistoricoCadastroActionPerformed(evt);
+            }
+        });
+        mnEstoque.add(miHistoricoCadastro);
 
         mbMenuSuperior.add(mnEstoque);
 
@@ -258,6 +278,20 @@ public class InterfaceConectada extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miCadastrarProdutosActionPerformed
 
+    private void miFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miFornecedoresActionPerformed
+        // TODO add your handling code here:
+        InterfaceFornecedores telaFornecedores = new InterfaceFornecedores();
+        telaFornecedores.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miFornecedoresActionPerformed
+
+    private void miHistoricoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miHistoricoCadastroActionPerformed
+        // TODO add your handling code here:
+        InterfaceHistoricoProdutos telaFornecedores = new InterfaceHistoricoProdutos();
+        telaFornecedores.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miHistoricoCadastroActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -303,13 +337,16 @@ public class InterfaceConectada extends javax.swing.JFrame {
     private javax.swing.JButton btnListaProdutos;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JLabel lbTitulo;
     private javax.swing.JMenuBar mbMenuSuperior;
     private javax.swing.JMenuItem miCadastrarProdutos;
     private javax.swing.JMenuItem miCriarConta;
+    private javax.swing.JMenuItem miFornecedores;
+    private javax.swing.JMenuItem miHistoricoCadastro;
     private javax.swing.JMenuItem miListaProdutos;
     private javax.swing.JMenuItem miTelaPrincipal;
     private javax.swing.JMenu mnEstoque;

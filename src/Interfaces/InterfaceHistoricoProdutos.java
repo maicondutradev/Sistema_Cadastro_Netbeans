@@ -53,6 +53,10 @@ public class InterfaceHistoricoProdutos extends javax.swing.JFrame {
         miListaProdutos = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         miCadastrarProdutos = new javax.swing.JMenuItem();
+        jSeparator9 = new javax.swing.JPopupMenu.Separator();
+        miFornecedores = new javax.swing.JMenuItem();
+        jSeparator8 = new javax.swing.JPopupMenu.Separator();
+        miHistoricoCadastro = new javax.swing.JMenuItem();
         mnSair = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
 
@@ -258,11 +262,39 @@ public class InterfaceHistoricoProdutos extends javax.swing.JFrame {
         mnEstoque.setText("ESTOQUE");
 
         miListaProdutos.setText("LISTA DE PRODUTOS");
+        miListaProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miListaProdutosActionPerformed(evt);
+            }
+        });
         mnEstoque.add(miListaProdutos);
         mnEstoque.add(jSeparator2);
 
         miCadastrarProdutos.setText("CADASTRAR PRODUTOS");
+        miCadastrarProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastrarProdutosActionPerformed(evt);
+            }
+        });
         mnEstoque.add(miCadastrarProdutos);
+        mnEstoque.add(jSeparator9);
+
+        miFornecedores.setText("FORNECEDORES");
+        miFornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miFornecedoresActionPerformed(evt);
+            }
+        });
+        mnEstoque.add(miFornecedores);
+        mnEstoque.add(jSeparator8);
+
+        miHistoricoCadastro.setText("HISTORICO CADASTRO");
+        miHistoricoCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miHistoricoCadastroActionPerformed(evt);
+            }
+        });
+        mnEstoque.add(miHistoricoCadastro);
 
         mbMenuSuperior.add(mnEstoque);
 
@@ -369,6 +401,34 @@ public class InterfaceHistoricoProdutos extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
+    private void miListaProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miListaProdutosActionPerformed
+        // TODO add your handling code here:
+        InterfaceListaProdutos telaListaProdutos = new InterfaceListaProdutos();
+        telaListaProdutos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miListaProdutosActionPerformed
+
+    private void miCadastrarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastrarProdutosActionPerformed
+        // TODO add your handling code here:
+        InterfaceCadastroProdutos telaCadastroProdutos = new InterfaceCadastroProdutos();
+        telaCadastroProdutos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miCadastrarProdutosActionPerformed
+
+    private void miFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miFornecedoresActionPerformed
+        // TODO add your handling code here:
+        InterfaceFornecedores telaFornecedores = new InterfaceFornecedores();
+        telaFornecedores.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miFornecedoresActionPerformed
+
+    private void miHistoricoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miHistoricoCadastroActionPerformed
+        // TODO add your handling code here:
+        InterfaceHistoricoProdutos telaHistoricoProdutos = new InterfaceHistoricoProdutos();
+        telaHistoricoProdutos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miHistoricoCadastroActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -451,6 +511,8 @@ public class InterfaceHistoricoProdutos extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JPopupMenu.Separator jSeparator8;
+    private javax.swing.JPopupMenu.Separator jSeparator9;
     private javax.swing.JLabel lbData;
     private javax.swing.JLabel lbData1;
     private javax.swing.JLabel lbData2;
@@ -471,6 +533,8 @@ public class InterfaceHistoricoProdutos extends javax.swing.JFrame {
     private javax.swing.JMenuBar mbMenuSuperior;
     private javax.swing.JMenuItem miCadastrarProdutos;
     private javax.swing.JMenuItem miCriarConta;
+    private javax.swing.JMenuItem miFornecedores;
+    private javax.swing.JMenuItem miHistoricoCadastro;
     private javax.swing.JMenuItem miListaProdutos;
     private javax.swing.JMenuItem miLogin;
     private javax.swing.JMenuItem miTelaPrincipal;

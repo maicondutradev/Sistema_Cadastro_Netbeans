@@ -52,6 +52,10 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         miListaProdutos = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         miCadastrarProdutos = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        miFornecedores = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        miCadastroHistorico = new javax.swing.JMenuItem();
         mnSair = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
 
@@ -176,6 +180,24 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
             }
         });
         mnEstoque.add(miCadastrarProdutos);
+        mnEstoque.add(jSeparator4);
+
+        miFornecedores.setText("FORNECEDORES");
+        miFornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miFornecedoresActionPerformed(evt);
+            }
+        });
+        mnEstoque.add(miFornecedores);
+        mnEstoque.add(jSeparator5);
+
+        miCadastroHistorico.setText("HISTORICO CADASTRO");
+        miCadastroHistorico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastroHistoricoActionPerformed(evt);
+            }
+        });
+        mnEstoque.add(miCadastroHistorico);
 
         mbMenuSuperior.add(mnEstoque);
 
@@ -434,6 +456,20 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_miCadastrarProdutosActionPerformed
 
+    private void miCadastroHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroHistoricoActionPerformed
+        // TODO add your handling code here:
+        InterfaceHistoricoProdutos telaHistoricoProdutos = new InterfaceHistoricoProdutos();
+        telaHistoricoProdutos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miCadastroHistoricoActionPerformed
+
+    private void miFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miFornecedoresActionPerformed
+        // TODO add your handling code here:
+        InterfaceFornecedores telaFornecedores = new InterfaceFornecedores();
+        telaFornecedores.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_miFornecedoresActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -487,6 +523,8 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JLabel lbCategoria;
     private javax.swing.JLabel lbCodigoBarra;
     private javax.swing.JLabel lbCodigoProduto;
@@ -500,7 +538,9 @@ public class InterfaceCadastroProdutos extends javax.swing.JFrame {
     private javax.swing.JLabel lbTitulo;
     private javax.swing.JMenuBar mbMenuSuperior;
     private javax.swing.JMenuItem miCadastrarProdutos;
+    private javax.swing.JMenuItem miCadastroHistorico;
     private javax.swing.JMenuItem miCriarConta;
+    private javax.swing.JMenuItem miFornecedores;
     private javax.swing.JMenuItem miListaProdutos;
     private javax.swing.JMenuItem miLogin;
     private javax.swing.JMenuItem miTelaPrincipal;
