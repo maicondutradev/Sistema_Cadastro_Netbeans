@@ -440,6 +440,13 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
             txtSobrenome.setText("");
             btngGenero.clearSelection();
             btngRacaCor.clearSelection();
+            ckbPodecadastrarUsuario.setSelected(false);
+            ckbPodeEditarProduto.setSelected(false);
+            ckbPodeExcluirProduto.setSelected(false);
+            ckbPodeCadastrarProduto.setSelected(false);
+            ckbPodeExcluirUsuario.setSelected(false);
+            cbCargo.setSelectedIndex(-1);
+            cbTurno.setSelectedIndex(-1);
         }
     }//GEN-LAST:event_btnCadastrarUsuarioActionPerformed
 
@@ -468,6 +475,8 @@ public class InterfaceCadastroUsuario extends javax.swing.JFrame {
             ckbPodeExcluirProduto.setSelected(false);
             ckbPodeCadastrarProduto.setSelected(false);
             ckbPodeExcluirUsuario.setSelected(false);
+            cbCargo.setSelectedIndex(-1);
+            cbTurno.setSelectedIndex(-1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ckbPodeEditarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ckbPodeEditarProdutoActionPerformed
