@@ -38,7 +38,6 @@ public class InterfaceConectada extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem1 = new javax.swing.JMenuItem();
         mnLoginCriarConta = new javax.swing.JMenu();
-        miLogin = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         miCriarConta = new javax.swing.JMenuItem();
         mnEstoque = new javax.swing.JMenu();
@@ -116,14 +115,6 @@ public class InterfaceConectada extends javax.swing.JFrame {
 
         mnLoginCriarConta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-user-32.png"))); // NOI18N
         mnLoginCriarConta.setText("LOGIN");
-
-        miLogin.setText("LOGIN");
-        miLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miLoginActionPerformed(evt);
-            }
-        });
-        mnLoginCriarConta.add(miLogin);
         mnLoginCriarConta.add(jSeparator1);
 
         miCriarConta.setText("CRIAR CONTA");
@@ -219,13 +210,6 @@ public class InterfaceConectada extends javax.swing.JFrame {
         telaMenu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_miTelaPrincipalActionPerformed
-
-    private void miLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLoginActionPerformed
-        // TODO add your handling code here:
-        InterfaceLogin telaLogin = new InterfaceLogin();
-        telaLogin.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_miLoginActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -343,7 +327,6 @@ public class InterfaceConectada extends javax.swing.JFrame {
     private javax.swing.JMenuItem miCadastrarProdutos;
     private javax.swing.JMenuItem miCriarConta;
     private javax.swing.JMenuItem miListaProdutos;
-    private javax.swing.JMenuItem miLogin;
     private javax.swing.JMenuItem miTelaPrincipal;
     private javax.swing.JMenu mnEstoque;
     private javax.swing.JMenu mnLoginCriarConta;
